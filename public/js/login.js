@@ -3,7 +3,7 @@ import { showAlert } from "./alert";
 
 export const login = (email, password) => {
   axios
-    .post("http://127.0.0.1:3000/api/v1/users/login", {
+    .post("/api/v1/users/login", {
       email,
       password,
     })
@@ -21,7 +21,7 @@ export const login = (email, password) => {
 
 export const logout = () => {
   axios
-    .get("http://127.0.0.1:3000/api/v1/users/logout")
+    .get("/api/v1/users/logout")
     .then(function (res) {
       if (res.data.status === "success") {
         document.cookie = `jwt=logout`;

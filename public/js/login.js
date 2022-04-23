@@ -9,9 +9,9 @@ export const login = (email, password) => {
     })
     .then(function (res) {
       if (res.data.status === "success") {
-        document.cookie = `jwt=${res.data.token}`;
+        // document.cookie = `jwt=${res.data.token}`;
         showAlert("success", "Logged in successfully!");
-        window.setTimeout(() => location.assign("/"), 1500);
+        window.setTimeout(() => location.assign("/"), 1000);
       }
     })
     .catch(function (error) {
